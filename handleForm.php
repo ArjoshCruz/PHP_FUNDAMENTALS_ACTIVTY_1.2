@@ -44,7 +44,7 @@
         echo "<h3>Total Price: " . $total . "</h3>"; 
         echo "<h3>You Paid: " . $cash . "</h3>"; 
         echo "<h3>CHANGE: " . $change . "</h3>"; 
-        echo "<h3 style='font-style: italic;'>" . date("Y/m/d"). " " . date("h:i:sa") . "</h3>"; 
+        echo "<h3 style='font-style: italic;'>" . date("m/d/Y"). " " . date("h:i:sa") . "</h3>"; 
         echo '</div>'; } } 
     ?>
   </body>
