@@ -15,9 +15,6 @@
         font-weight: bold;
       }
 
-      .container {
-        border: 1px dotted black;
-      }
     </style>
   </head>
   <body>
@@ -33,19 +30,21 @@
           "burger" => 50, 
           "fries" => 75, 
           "steak" => 150 ); 
-      $total = $menuPrices[$order] * $quantity; 
-      $change = $cash - $total; 
+        $total = $menuPrices[$order] * $quantity; 
+        $change = $cash - $total; 
       
-      if ($cash < $total) { 
-        echo '<div class="container" style="border: 1px dotted red";>'; 
-        echo "<h1>Sorry, balance not enough.</h1>"; 
-        echo '</div>'; } else { echo '<div class="container">'; 
-        echo "<h2>RECEIPT</h2>"; 
-        echo "<h3>Total Price: " . $total . "</h3>"; 
-        echo "<h3>You Paid: " . $cash . "</h3>"; 
-        echo "<h3>CHANGE: " . $change . "</h3>"; 
-        echo "<h3 style='font-style: italic;'>" . date("m/d/Y"). " " . date("h:i:sa") . "</h3>"; 
-        echo '</div>'; } } 
+        if ($cash < $total) { 
+          echo '<div style="border: 1px dotted red";>'; 
+          echo "<h1>Sorry, balance not enough.</h1>"; 
+          echo '</div>'; } 
+        else { 
+          echo '<div style="border: 1px dotted black";>'; 
+          echo "<h2>RECEIPT</h2>"; 
+          echo "<h3>Total Price: " . $total . "</h3>"; 
+          echo "<h3>You Paid: " . $cash . "</h3>"; 
+          echo "<h3>CHANGE: " . $change . "</h3>"; 
+          echo "<h3 style='font-style: italic;'>" . date("m/d/Y"). " " . date("h:i:sa") . "</h3>"; 
+          echo '</div>'; } } 
     ?>
   </body>
 </html>
